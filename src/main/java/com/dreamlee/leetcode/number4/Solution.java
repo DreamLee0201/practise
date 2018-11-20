@@ -1,4 +1,4 @@
-package com.dreamlee.struct.test;
+package com.dreamlee.leetcode.number4;
 
 import java.util.Stack;
 
