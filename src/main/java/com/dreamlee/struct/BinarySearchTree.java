@@ -100,10 +100,12 @@ public class BinarySearchTree<E extends Comparable<E>> {
                 return left;
             }
             else {
+                // 待删除节点左右子树均不为空的情况，找到比待删除节点大的最小节点，
+                // 即待删除节点右子树的最小节点，用这个节点顶替待删除节点的位置
                 Node ret = minimum(node.right);
-                ret.left = node.left;
                 ret.right = removeMin(node.right);
-                node.left = node.right = null;
+                ret.left = node.left;
+                node = null;
                 return  ret;
             }
         }
