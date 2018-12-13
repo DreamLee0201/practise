@@ -105,6 +105,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
                 Node ret = minimum(node.right);
                 ret.right = removeMin(node.right);
                 ret.left = node.left;
+                System.out.println("abc");
                 node = null;
                 return  ret;
             }
