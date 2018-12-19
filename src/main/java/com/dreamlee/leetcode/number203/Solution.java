@@ -17,7 +17,7 @@ class ListNode {
         val = x;
     }
     ListNode(int[] arr) {
-        if (null == arr && arr.length == 0)
+        if (null == arr || arr.length == 0)
             throw new IllegalArgumentException("数组不能为空");
         this.val = arr[0];
         ListNode cur = this;
